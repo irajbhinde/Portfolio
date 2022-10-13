@@ -1,2 +1,88 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
+:root{
+  --primary : #34568b
+}
+
+.is-primary{
+  background-color: var(--primary);
+}
+
+.container2{
+  display: flex;
+  flex-direction: row;
+  padding-right: 0;
+}
+
+.avatar{
+  width: 150px;
+  margin: 2rem 0;
+}
+
+@media screen and (min-width: 769px){
+.avatar {
+    width: 210px;
+}
+}
+
+.navbar{
+  padding: 1.2rem 0;
+}
+
+.hero{
+  padding-top: 2rem;
+}
+
+@media screen and (min-width : 769px){
+  .hero-footer-image{
+    max-width: 860px;
+    max-height: 348px;
+    margin-bottom: -64px;
+  }
+}
+
+
+
+.projects .project-grid figure img.project-thumb {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition: .25s ease-in-out;
+}
+
+.projects .project-grid figure img.project-thumb :hover {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition: .25s ease-in-out;
+}             
+       /* <!-- <figure class="image is-3by2">
+<img class="project-thumb" src="./images//wfdesignbuild.png">
+<figcaption>
+  <h1 class="class="title is-size-5 is-size-4-widescreen>
+    This is Project Caption
+  </h1>
+  <a class="button is-primary is-outlined is-rounded" href="">
+  </a>
+  <span>Visit Website</span>
+</figcaption>
+</figure> --> */
+
+.button{
+  margin-top: 2rem;
+}
+
+.btnCheckProject:hover{
+  color: var(--primary);
+}
+
+.ecom-project{
+  width: 1280px;
+  height: 960px;
+}
+
+.card{
+  margin: 1rem 0.5rem 1rem 0;
+}
+
+.card-header-title{
+  margin-bottom: 0 !important;  
+}

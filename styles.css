@@ -1,88 +1,167 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
-:root{
-  --primary : #34568b
+:root {
+  --primary: #34568b;
+  --white-text: #f5f5f5;
+  --black-text: #0a0a0a;
 }
 
-.is-primary{
+.is-primary {
   background-color: var(--primary);
 }
 
-.container2{
+.button.resume {
+  background-color: var(--primary) !important;
+  color: var(--white-text) !important;
+  border-color: var(--primary) !important;
+}
+
+.container2 {
   display: flex;
   flex-direction: row;
   padding-right: 0;
 }
 
-.avatar{
+.avatar {
   width: 150px;
   margin: 2rem 0;
 }
 
-@media screen and (min-width: 769px){
-.avatar {
+@media screen and (min-width: 769px) {
+  .avatar {
     width: 210px;
-}
-}
-
-.navbar{
-  padding: 1.2rem 0;
-}
-
-.hero{
-  padding-top: 2rem;
-}
-
-@media screen and (min-width : 769px){
-  .hero-footer-image{
-    max-width: 860px;
-    max-height: 348px;
-    margin-bottom: -64px;
   }
 }
 
-
-
-.projects .project-grid figure img.project-thumb {
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  transition: .25s ease-in-out;
+.navbar {
+  padding: 1.2rem 0;
 }
 
-.projects .project-grid figure img.project-thumb :hover {
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  transition: .25s ease-in-out;
-}             
-       /* <!-- <figure class="image is-3by2">
-<img class="project-thumb" src="./images//wfdesignbuild.png">
-<figcaption>
-  <h1 class="class="title is-size-5 is-size-4-widescreen>
-    This is Project Caption
-  </h1>
-  <a class="button is-primary is-outlined is-rounded" href="">
-  </a>
-  <span>Visit Website</span>
-</figcaption>
-</figure> --> */
-
-.button{
-  margin-top: 2rem;
+.hero {
+  padding-top: 2rem;
 }
 
-.btnCheckProject:hover{
+@media screen and (min-width: 769px) {
+  .hero-footer-image {
+    max-width: 860px;
+    max-height: 348px;
+  }
+}
+
+.btnCheckProject:hover {
   color: var(--primary);
 }
 
-.ecom-project{
+.ecom-project {
   width: 1280px;
   height: 960px;
 }
 
-.card{
+.card {
   margin: 1rem 0.5rem 1rem 0;
 }
 
-.card-header-title{
-  margin-bottom: 0 !important;  
+.card-header-title {
+  margin-bottom: 0 !important;
+}
+
+.project-grid figure:hover img {
+  transform: scale(1.1);
+}
+
+.project-grid .overlay,
+.project-grid figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.45s ease-in-out;
+}
+
+.project-grid figure figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0rem 3rem;
+  color: #ffffff;
+  z-index: 1;
+}
+
+.project-grid figure figcaption h1 {
+  color: var(--white-text);
+}
+
+.project-grid figure {
+  position: relative;
+  overflow: hidden;
+}
+
+.content figure {
+  margin: 0 !important;
+}
+
+.project-grid figure img.ecom-project {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition: 0.25s ease-in-out;
+}
+
+.project-grid .overlay {
+  background-color: #141c3a;
+}
+
+.project-grid figure:hover .overlay,
+.project-grid figure:hover figcaption {
+  opacity: 1;
+}
+
+.button.is-primary.is-outlined.is-rounded {
+  width: 9rem !important;
+}
+
+.flex_r {
+  display: flex;
+}
+
+.project_buttons {
+  gap: 1rem;
+}
+
+.button.is-primary.is-outlined.visitWebsite,
+.button.is-primary.is-outlined.seeMyCode {
+  background-color: transparent;
+  border-color: var(--white-text) !important;
+  color: var(--white-text) !important;
+}
+
+.button.is-primary.is-outlined.visitWebsite:hover,
+.button.is-primary.is-outlined.seeMyCode:hover {
+  background-color: var(--white-text);
+  border-color: var(--white-text) !important;
+  color: var(--black-text) !important;
+}
+
+@media only screen and (max-width: 500px) {
+  .button.is-primary.is-outlined.is-rounded {
+    width: 7rem !important;
+  }
+}
+
+.lookingForJobHeader,
+.lookingForJobSubtitle {
+  margin-top: 3rem;
+}
+
+.navbar .buttons {
+  justify-content: center;
+}
+
+.figure:hover figcaption .project_buttons.project {
+  color: var(--white-text) !important;
+}
+
+.blog-image {
+  height: 14rem;
 }

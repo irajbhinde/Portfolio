@@ -165,3 +165,21 @@
 .blog-image {
   height: 14rem;
 }
+
+.justify_center {
+  justify-content: center;
+}
+
+.socials p {
+  margin: 2rem 0;
+  gap: 2rem;
+}
+
+.socials {
+  margin-bottom: 1.5rem;
+}
+
+a i {
+  text-decoration: none;
+  color: black;
+}

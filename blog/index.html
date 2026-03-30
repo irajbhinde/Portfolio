@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/56744ae91f.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raj Bhinde | CS632 Discussions</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <style>
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        color: var(--primary);
+        font-weight: 500;
+        margin-bottom: 2rem;
+        text-decoration: none;
+      }
+      .back-link:hover {
+        text-decoration: underline;
+        color: var(--primary);
+      }
+      /* Article view */
+      #view-article {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem 4rem;
+      }
+      .blog-post-title {
+        color: var(--primary);
+        line-height: 1.3;
+        margin-bottom: 1.5rem;
+      }
+      .blog-post-body {
+        font-size: 1.1rem;
+        line-height: 1.9;
+        color: #363636;
+      }
+      .read-original {
+        display: inline-block;
+        margin-top: 2.5rem;
+        background-color: var(--primary);
+        color: #f5f5f5;
+        padding: 0.65rem 1.4rem;
+        border-radius: 4px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: opacity 0.2s ease;
+      }
+      .read-original:hover {
+        opacity: 0.85;
+        color: #f5f5f5;
+      }
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 2rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar is-transparent"
+      aria-label="main navigation"
+      role="navigation"
+    >
+      <div class="container">
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a href="/index.html#project-hashid" class="navbar-item">Projects</a>
+              <a href="/index.html#blog-hashid" class="navbar-item">Blogs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Listing view -->
+    <section id="view-listing" class="section has-text-centered">
+      <div class="container is-narrow">
+        <div class="content">
+          <div class="columns is-centered">
+            <div class="column">
+              <a href="/index.html#blog-hashid" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Blogs
+              </a>
+              <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile" style="color: var(--primary);">
+                CS632 Discussions
+              </h1>
+              <div class="blog-grid" style="margin-top: 2rem;">
+                <div class="columns is-multiline is-mobile is-centered">
+                  <div class="column is-12-mobile is-half-tablet is-one-third-desktop">
+                    <div class="card-image">
+                      <a target="_blank" href="https://dev.to/irajbhinde/reviewing-a-review-2l09">
+                        <img class="blog-image" src="/images/oracle.jpg" alt="Reviewing a Review" />
+                      </a>
+                      <footer class="card-footer">
+                        <p class="card-footer-item">
+                          <a target="_blank" href="https://dev.to/irajbhinde/reviewing-a-review-2l09">
+                            CS632 Discussion #5 Reviewing a Review
+                          </a>
+                        </p>
+                      </footer>
+                    </div>
+                  </div>
+                  <div class="column is-12-mobile is-half-tablet is-one-third-desktop">
+                    <div class="card-image">
+                      <a href="/blog/#databases">
+                        <img class="blog-image" src="/images/database.webp" alt="The Next Revolution For Databases" />
+                      </a>
+                      <footer class="card-footer">
+                        <p class="card-footer-item">
+                          <a href="/blog/#databases">
+                            Smarter, More Distributed, More Diverse, and a New Role for RDMSes: The Next Revolution For Databases
+                          </a>
+                        </p>
+                      </footer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article view -->
+    <div id="view-article" style="display: none;">
+      <a href="/blog/" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to CS632 Discussions
+      </a>
+      <h1 class="title is-3 blog-post-title">
+        Smarter, More Distributed, More Diverse, and a New Role for RDMSes: The Next Revolution For Databases
+      </h1>
+      <hr class="divider" />
+      <div class="blog-post-body">
+        <p>
+          The article explains how databases are evolving to handle much larger
+          amounts of data and more complex workloads than before. It highlights
+          how systems are becoming more distributed, meaning data is stored and
+          processed across multiple locations instead of a single server.
+        </p>
+        <br />
+        <p>
+          The article also points out that there is now a mix of different types
+          of databases, each designed for specific tasks like analytics,
+          transactions, or real-time processing. It discusses how traditional
+          relational databases are still important but are now working alongside
+          newer database technologies rather than replacing them.
+        </p>
+        <br />
+        <p>
+          Overall, the piece shows that modern databases are becoming more
+          flexible, scalable, and better suited for today's data-driven
+          applications.
+        </p>
+      </div>
+      <a
+        class="read-original"
+        href="https://www.dbta.com/Editorial/Trends-and-Applications/Smarter-More-Distributed-More-Diverse-And-a-New-Role-for-RDMSes-The-Next-Revolution-For-Databases-171222.aspx"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Read Original Article <i class="fas fa-external-link-alt" style="font-size: 0.85em; margin-left: 0.3rem;"></i>
+      </a>
+    </div>
+
+    <script>
+      function route() {
+        var isArticle = window.location.hash === '#databases';
+        document.getElementById('view-listing').style.display = isArticle ? 'none' : '';
+        document.getElementById('view-article').style.display = isArticle ? 'block' : 'none';
+        document.title = isArticle
+          ? 'Raj Bhinde | The Next Revolution For Databases'
+          : 'Raj Bhinde | CS632 Discussions';
+      }
+      route();
+      window.addEventListener('hashchange', route);
+    </script>
+  </body>
+</html>

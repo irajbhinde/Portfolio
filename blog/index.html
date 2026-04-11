@@ -29,7 +29,8 @@
         color: var(--primary);
       }
       /* Article view */
-      #view-article {
+      #view-article-databases,
+      #view-article-nutanix {
         max-width: 780px;
         margin: 0 auto;
         padding: 3rem 1.5rem 4rem;
@@ -126,6 +127,20 @@
                       </footer>
                     </div>
                   </div>
+                  <div class="column is-12-mobile is-half-tablet is-one-third-desktop">
+                    <div class="card-image">
+                      <a href="/blog/#nutanix">
+                        <img class="blog-image" src="/images/database.webp" alt="How Database Operations Management Can Accelerate the Business with Nutanix" />
+                      </a>
+                      <footer class="card-footer">
+                        <p class="card-footer-item">
+                          <a href="/blog/#nutanix">
+                            How Database Operations Management Can Accelerate the Business with Nutanix
+                          </a>
+                        </p>
+                      </footer>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -134,8 +149,8 @@
       </div>
     </section>
 
-    <!-- Article view -->
-    <div id="view-article" style="display: none;">
+    <!-- Article view: databases -->
+    <div id="view-article-databases" style="display: none;">
       <a href="/blog/" class="back-link">
         <i class="fas fa-arrow-left"></i> Back to CS632 Discussions
       </a>
@@ -152,7 +167,7 @@
         </p>
         <br />
         <p>
-          The article also points out that there are now many different types of databases, 
+          The article also points out that there are now many different types of databases,
           each designed for specific tasks like analytics,
           transactions, or real-time processing. It discusses how traditional
           relational databases are still important but are now working alongside
@@ -175,14 +190,59 @@
       </a>
     </div>
 
+    <!-- Article view: nutanix -->
+    <div id="view-article-nutanix" style="display: none;">
+      <a href="/blog/" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to CS632 Discussions
+      </a>
+      <h1 class="title is-3 blog-post-title">
+        How Database Operations Management Can Accelerate the Business with Nutanix
+      </h1>
+      <hr class="divider" />
+      <div class="blog-post-body">
+        <p>
+          Managing databases using manual processes is often slow, complicated, and resource-heavy,
+          which can delay innovation and increase operational risk. Tasks like patching, testing updates,
+          and responding to developer requests can take weeks, while maintaining large and growing database
+          systems across different environments adds even more complexity and strain on IT teams.
+        </p>
+        <br />
+        <p>
+          Nutanix Database Service (NDB) helps solve these problems by automating routine tasks and
+          simplifying database management across hybrid and multi-cloud systems. It allows teams to quickly
+          test and apply updates, reduce downtime, cut costs, and shift their focus from repetitive
+          maintenance work to more strategic, innovative projects, ultimately delivering strong business
+          value and return on investment.
+        </p>
+      </div>
+      <a
+        class="read-original"
+        href="https://www.dbta.com/Editorial/News-Flashes/How-Database-Operations-Management-Can-Accelerate-the-Business-with-Nutanix-174301.aspx"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Read Original Article <i class="fas fa-external-link-alt" style="font-size: 0.85em; margin-left: 0.3rem;"></i>
+      </a>
+    </div>
+
     <script>
       function route() {
-        var isArticle = window.location.hash === '#databases';
+        var hash = window.location.hash;
+        var isDatabases = hash === '#databases';
+        var isNutanix = hash === '#nutanix';
+        var isArticle = isDatabases || isNutanix;
+
         document.getElementById('view-listing').style.display = isArticle ? 'none' : '';
-        document.getElementById('view-article').style.display = isArticle ? 'block' : 'none';
-        document.title = isArticle
-          ? 'Raj Bhinde | The Next Revolution For Databases'
-          : 'Raj Bhinde | CS632 Discussions';
+        document.getElementById('view-article-databases').style.display = isDatabases ? 'block' : 'none';
+        document.getElementById('view-article-nutanix').style.display = isNutanix ? 'block' : 'none';
+
+        if (isDatabases) {
+          document.title = 'Raj Bhinde | The Next Revolution For Databases';
+        } else if (isNutanix) {
+          document.title = 'Raj Bhinde | Database Operations Management with Nutanix';
+        } else {
+          document.title = 'Raj Bhinde | CS632 Discussions';
+        }
       }
       route();
       window.addEventListener('hashchange', route);
